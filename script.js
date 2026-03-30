@@ -1,32 +1,65 @@
-// loader
-window.addEventListener("load",()=>{
-const loader=document.getElementById("loader");
-loader.style.opacity="0";
-setTimeout(()=>loader.style.display="none",500);
+// LOADER (PASTI HILANG)
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if(loader){
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  }
 });
 
-// GSAP
-gsap.registerPlugin(ScrollTrigger);
+// FORCE HIDE LOADER (backup)
+setTimeout(() => {
+  const loader = document.getElementById("loader");
+  if(loader){
+    loader.style.display = "none";
+  }
+}, 3000);
 
-gsap.from(".hero h1",{y:60,opacity:0,duration:1});
-gsap.from(".hero p",{y:40,opacity:0,duration:1,delay:0.2});
+// GSAP SAFE MODE
+window.addEventListener("DOMContentLoaded", () => {
 
-gsap.utils.toArray(".grid").forEach(grid=>{
-gsap.from(grid.children,{
-opacity:0,
-y:40,
-stagger:0.2,
-duration:0.8,
-scrollTrigger:{
-trigger:grid,
-start:"top 85%"
-}
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".hero h1", {
+      y:50,
+      opacity:0,
+      duration:1
+    });
+
+    gsap.from(".hero p", {
+      y:30,
+      opacity:0,
+      duration:1,
+      delay:0.2
+    });
+
+    document.querySelectorAll(".grid").forEach(grid => {
+      gsap.from(grid.children, {
+        opacity:0,
+        y:40,
+        stagger:0.2,
+        duration:0.8,
+        scrollTrigger:{
+          trigger:grid,
+          start:"top 85%"
+        }
+      });
+    });
+
+  } else {
+    console.log("GSAP gagal load (tidak fatal)");
+  }
+
 });
-});
 
-// progress
-window.addEventListener("scroll",()=>{
-const scrollTop=window.scrollY;
-const height=document.body.scrollHeight-window.innerHeight;
-document.getElementById("progress").style.width=(scrollTop/height)*100+"%";
+// PROGRESS BAR (AMAN)
+window.addEventListener("scroll", () => {
+  const progress = document.getElementById("progress");
+  if(progress){
+    const scrollTop = window.scrollY;
+    const height = document.body.scrollHeight - window.innerHeight;
+    progress.style.width = (scrollTop / height) * 100 + "%";
+  }
 });
