@@ -1,4 +1,4 @@
-// LOADER (PASTI HILANG)
+// FORCE LOADER HILANG (ANTI BLANK)
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   if(loader){
@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
   }
 });
 
-// FORCE HIDE LOADER (backup)
+// BACKUP (kalau error tetap hilang)
 setTimeout(() => {
   const loader = document.getElementById("loader");
   if(loader){
@@ -49,12 +49,12 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
   } else {
-    console.log("GSAP gagal load (tidak fatal)");
+    console.log("GSAP tidak load (aman)");
   }
 
 });
 
-// PROGRESS BAR (AMAN)
+// PROGRESS BAR
 window.addEventListener("scroll", () => {
   const progress = document.getElementById("progress");
   if(progress){
