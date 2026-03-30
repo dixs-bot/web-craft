@@ -1,1107 +1,166 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Tekstil Maju Global - Pemasok Tekstil Terpercaya</title>
-    <meta name="description" content="Pemasok tekstil global terpercaya. Menyediakan kain katun, sutra, dan poliester premium untuk fashion dan industri. Ekspor impor berkualitas.">
-    <meta name="keywords" content="Pemasok kain impor Jakarta, Indonesian textile exporter, Grosir kain, Kain tekstil premium">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-color: #0f2b46; /* Deep Blue - Trust & Professionalism */
-            --secondary-color: #c5a059; /* Gold - Premium Quality */
-            --bg-light: #f8f9fa;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --white: #ffffff;
-            --transition: all 0.3s ease;
-            --container-width: 1200px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* --- UTILITIES --- */
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border-radius: 4px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 2px solid var(--primary-color);
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--primary-color);
-        }
-
-        .btn-secondary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            color: var(--white);
-        }
-
-        .btn-secondary:hover {
-            background-color: transparent;
-            color: var(--secondary-color);
-        }
-
-        /* --- HEADER & NAV --- */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo i {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            color: var(--primary-color);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--secondary-color);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .lang-switch {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--primary-color);
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            transition: var(--transition);
-        }
-
-        .lang-btn.active, .lang-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* --- HERO SECTION --- */
-        #home {
-            height: 100vh;
-            background: linear-gradient(rgba(15, 43, 70, 0.7), rgba(15, 43, 70, 0.7)), url('https://picsum.photos/seed/warehouse/1920/1080');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding-top: 80px;
-        }
-
-        .hero-content h1 {
-            color: var(--white);
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 1s ease 0.3s backwards;
-        }
-
-        /* --- ABOUT US --- */
-        #about {
-            background-color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .certifications {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .cert-badge {
-            background: var(--bg-light);
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-weight: 600;
-            color: var(--primary-color);
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* --- CATALOG --- */
-        #catalog {
-            background-color: var(--bg-light);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-        }
-
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .product-img-wrapper {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .product-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .product-img-wrapper:hover img {
-            transform: scale(1.1);
-        }
-
-        .product-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 43, 70, 0.6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .product-card:hover .product-overlay {
-            opacity: 1;
-        }
-
-        .view-details-btn {
-            background: var(--white);
-            color: var(--primary-color);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-info h3 {
-            font-size: 1.2rem;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
-        }
-
-        .product-specs {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 15px;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        .spec-item i {
-            color: var(--secondary-color);
-            margin-right: 5px;
-        }
-
-        /* --- LOGISTICS --- */
-        #logistics {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        #logistics h2 {
-            color: var(--white);
-        }
-
-        .logistics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .logistics-item {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-
-        .logistics-item:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .logistics-icon {
-            font-size: 3rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-
-        /* --- CLIENTS --- */
-        #clients {
-            padding: 40px 0;
-            background-color: var(--white);
-            border-bottom: 1px solid #eee;
-        }
-
-        .client-logos {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            opacity: 0.6;
-        }
-        
-        .client-logo-item {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #aaa;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* --- CONTACT --- */
-        #contact {
-            background-color: var(--bg-light);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            background: var(--white);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .contact-info h3 {
-            margin-bottom: 20px;
-        }
-
-        .info-group {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .info-group i {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            margin-top: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #0a1e32;
-            color: #ccc;
-            padding: 60px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-        }
-
-        /* --- WHATSAPP FLOAT --- */
-        .wa-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 100;
-            transition: var(--transition);
-        }
-
-        .wa-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* --- MODAL --- */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            border-radius: 8px;
-            width: 100%;
-            max-width: 800px;
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            overflow: hidden;
-            animation: zoomIn 0.3s;
-        }
-
-        .close-modal {
-            color: #aaa;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .close-modal:hover {
-            color: var(--text-dark);
-        }
-
-        .modal-img {
-            height: 100%;
-            min-height: 400px;
-            object-fit: cover;
-        }
-
-        .modal-details {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* --- TOAST NOTIFICATION --- */
-        #toast {
-            visibility: hidden;
-            min-width: 250px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 4px;
-            padding: 16px;
-            position: fixed;
-            z-index: 3000;
-            left: 50%;
-            bottom: 30px;
-            transform: translateX(-50%);
-            font-size: 1rem;
-        }
-
-        #toast.show {
-            visibility: visible;
-            animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes zoomIn {
-            from {transform: scale(0.9); opacity: 0;}
-            to {transform: scale(1); opacity: 1;}
-        }
-        @keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
-        }
-        @keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 992px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            .about-grid, .contact-container, .modal-content { grid-template-columns: 1fr; }
-            .modal-img { height: 300px; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                padding: 20px;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-            .nav-links.active { display: flex; }
-            .menu-toggle { display: block; }
-            .hero-content h1 { font-size: 2rem; }
-            .section-header h2 { font-size: 2rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasa Website Murah UMKM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{font-family:Montserrat,sans-serif;margin:0;color:#333}
+.container{max-width:1100px;margin:auto;padding:20px}
+header{position:fixed;width:100%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:999}
+nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#0f2b46;color:#fff;padding-top:70px}
+.btn{background:#c5a059;color:#fff;padding:12px 25px;border:none;border-radius:5px;cursor:pointer;text-decoration:none;display:inline-block}
+.section{padding:80px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{padding:20px;border:1px solid #eee;border-radius:8px}
+.price{font-size:24px;color:#c5a059;font-weight:bold}
+footer{background:#0f2b46;color:#fff;text-align:center;padding:20px}
+.badge{color:red;font-weight:bold;margin-top:10px}
+</style>
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fa-solid fa-layer-group"></i> PT TEKSTIL MAJU
-                </div>
-                <div class="menu-toggle" id="mobile-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#home" data-lang-id="Beranda" data-lang-en="Home">Beranda</a></li>
-                    <li><a href="#about" data-lang-id="Tentang Kami" data-lang-en="About Us">Tentang Kami</a></li>
-                    <li><a href="#catalog" data-lang-id="Katalog" data-lang-en="Catalog">Katalog</a></li>
-                    <li><a href="#logistics" data-lang-id="Layanan" data-lang-en="Logistics">Layanan</a></li>
-                    <li><a href="#contact" data-lang-id="Kontak" data-lang-en="Contact">Kontak</a></li>
-                </ul>
-                <div class="lang-switch">
-                    <button class="lang-btn active" id="btn-id" onclick="setLanguage('id')">ID</button>
-                    <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
-                </div>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="container">
+<nav>
+<h3>WEB UMKM PRO</h3>
+<a href="https://wa.me/6281234567890" class="btn">Konsultasi</a>
+</nav>
+</div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-lang-id="Solusi Tekstil Global Terpercaya" data-lang-en="Trusted Global Textile Solution">Solusi Tekstil Global Terpercaya</h1>
-                <p data-lang-id="Kami menyediakan kain premium berkualitas ekspor untuk fashion dan industri. Mitra terbaik untuk bisnis tekstil Anda." 
-                   data-lang-en="We provide export-quality premium fabrics for fashion and industry. Your best partner for the textile business.">
-                   Kami menyediakan kain premium berkualitas ekspor untuk fashion dan industri. Mitra terbaik untuk bisnis tekstil Anda.
-                </p>
-                <a href="#contact" class="btn btn-secondary" data-lang-id="Minta Penawaran" data-lang-en="Request a Quote">Minta Penawaran</a>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1>Bikin Website Murah untuk UMKM 🚀</h1>
+<p>Mulai 499rb • Jadi 1-2 hari • Gratis revisi</p>
 
-    <!-- Client Logos Strip -->
-    <section id="clients">
-        <div class="container">
-            <div class="client-logos">
-                <div class="client-logo-item"><i class="fa-brands fa-aws"></i> GLOBAL FASHION LTD</div>
-                <div class="client-logo-item"><i class="fa-brands fa-google"></i> INDO TEXTILE</div>
-                <div class="client-logo-item"><i class="fa-brands fa-unity"></i> PREMIUM WEAR</div>
-                <div class="client-logo-item"><i class="fa-solid fa-industry"></i> AUTO SEAT INC</div>
-            </div>
-        </div>
-    </section>
+<p style="color:#c5a059;font-weight:bold;">
+🔥 Diskon 30% untuk 10 UMKM pertama!
+</p>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 data-lang-id="Tentang Perusahaan Kami" data-lang-en="About Our Company">Tentang Perusahaan Kami</h2>
-                    <p data-lang-id="Berdiri sejak tahun 2005, PT Tekstil Maju telah berkembang menjadi salah satu eksportir kain terkemuka di Indonesia. Visi kami adalah menghubungkan kekayaan alam Indonesia dengan pasar global melalui produk tekstil berkualitas tinggi." 
-                       data-lang-en="Established in 2005, PT Tekstil Maju has grown into one of Indonesia's leading fabric exporters. Our vision is to connect Indonesia's natural wealth with global markets through high-quality textile products.">
-                       Berdiri sejak tahun 2005, PT Tekstil Maju telah berkembang menjadi salah satu eksportir kain terkemuka di Indonesia. Visi kami adalah menghubungkan kekayaan alam Indonesia dengan pasar global melalui produk tekstil berkualitas tinggi.
-                    </p>
-                    <br>
-                    <p data-lang-id="Kami berkomitmen terhadap keberlanjutan dan kualitas, terbukti dengan standar internasional yang kami pegang." 
-                       data-lang-en="We are committed to sustainability and quality, proven by the international standards we hold.">
-                       Kami berkomitmen terhadap keberlanjutan dan kualitas, terbukti dengan standar internasional yang kami pegang.
-                    </p>
-                    
-                    <div class="certifications">
-                        <div class="cert-badge"><i class="fa-solid fa-certificate"></i> ISO 9001:2015</div>
-                        <div class="cert-badge"><i class="fa-solid fa-leaf"></i> OEKO-TEX</div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://picsum.photos/seed/factory/600/400" alt="Gudang Tekstil" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
+<p class="badge">⚠ Slot terbatas! Max 5 client per hari</p>
 
-    <!-- Product Catalog -->
-    <section id="catalog" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang-id="Katalog Produk Premium" data-lang-en="Premium Product Catalog">Katalog Produk Premium</h2>
-                <p data-lang-id="Temukan tekstur terbaik untuk kebutuhan Anda" data-lang-en="Discover the best textures for your needs">Temukan tekstur terbaik untuk kebutuhan Anda</p>
-            </div>
-            
-            <div class="catalog-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-img-wrapper" onclick="openModal('product1')">
-                        <img src="https://picsum.photos/seed/cotton/400/300" alt="Katun Jepang" loading="lazy">
-                        <div class="product-overlay">
-                            <span class="view-details-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> <span data-lang-id="Lihat Detail" data-lang-en="View Details">Lihat Detail</span></span>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Japanese Cotton (Katun Jepang)</h3>
-                        <div class="product-specs">
-                            <span class="spec-item"><i class="fa-solid fa-weight-hanging"></i> 120 GSM</span>
-                            <span class="spec-item"><i class="fa-solid fa-ruler-horizontal"></i> 150 cm</span>
-                        </div>
-                        <p data-lang-id="Kapas premium dengan serat halus, sangat cocok untuk pakaian anak-anak dan fashion sehari-hari." 
-                           data-lang-en="Premium cotton with smooth fibers, perfect for children's wear and daily fashion.">
-                           Kapas premium dengan serat halus, sangat cocok untuk pakaian anak-anak dan fashion sehari-hari.
-                        </p>
-                    </div>
-                </div>
+<a href="https://wa.me/6281234567890?text=Halo saya mau bikin website"
+class="btn">Chat WhatsApp Sekarang</a>
+</div>
+</section>
 
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-img-wrapper" onclick="openModal('product2')">
-                        <img src="https://picsum.photos/seed/silk/400/300" alt="Sutra ATBM" loading="lazy">
-                        <div class="product-overlay">
-                            <span class="view-details-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> <span data-lang-id="Lihat Detail" data-lang-en="View Details">Lihat Detail</span></span>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Natural Silk (Sutra Alami)</h3>
-                        <div class="product-specs">
-                            <span class="spec-item"><i class="fa-solid fa-weight-hanging"></i> 90 GSM</span>
-                            <span class="spec-item"><i class="fa-solid fa-ruler-horizontal"></i> 114 cm</span>
-                        </div>
-                        <p data-lang-id="Sutra tenun manual ATBM dengan motif tradisional yang eksklusif dan kilau alami yang mewah." 
-                           data-lang-en="Handwoven ATBM silk with exclusive traditional motifs and a luxurious natural sheen.">
-                           Sutra tenun manual ATBM dengan motif tradisional yang eksklusif dan kilau alami yang mewah.
-                        </p>
-                    </div>
-                </div>
+<!-- KEUNGGULAN -->
+<section class="section">
+<div class="container text-center">
+<h2>Kenapa Pilih Kami?</h2>
+<div class="grid">
+<div class="card">✔ Harga super terjangkau</div>
+<div class="card">✔ Cocok untuk UMKM & jualan online</div>
+<div class="card">✔ Bisa custom sesuai bisnis</div>
+<div class="card">✔ Support cepat via WhatsApp</div>
+</div>
+</div>
+</section>
 
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-img-wrapper" onclick="openModal('product3')">
-                        <img src="https://picsum.photos/seed/polyester/400/300" alt="Poliester Industri" loading="lazy">
-                        <div class="product-overlay">
-                            <span class="view-details-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> <span data-lang-id="Lihat Detail" data-lang-en="View Details">Lihat Detail</span></span>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Industrial Polyester</h3>
-                        <div class="product-specs">
-                            <span class="spec-item"><i class="fa-solid fa-weight-hanging"></i> 300 GSM</span>
-                            <span class="spec-item"><i class="fa-solid fa-ruler-horizontal"></i> 200 cm</span>
-                        </div>
-                        <p data-lang-id="Kain tahan lama dan anti-air, dirancang khusus untuk kebutuhan otomotif, tas, dan furnitur outdoor." 
-                           data-lang-en="Durable and water-resistant fabric, designed specifically for automotive, bags, and outdoor furniture needs.">
-                           Kain tahan lama dan anti-air, dirancang khusus untuk kebutuhan otomotif, tas, dan furnitur outdoor.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="#contact" class="btn" data-lang-id="Unduh Katalog Lengkap" data-lang-en="Download Full Catalog">Unduh Katalog Lengkap</a>
-            </div>
-        </div>
-    </section>
+<!-- CARA ORDER -->
+<section class="section" style="background:#f8f9fa">
+<div class="container text-center">
+<h2>Cara Order Gampang Banget</h2>
+<div class="grid">
+<div class="card">1️⃣ Chat WhatsApp</div>
+<div class="card">2️⃣ Kirim data usaha</div>
+<div class="card">3️⃣ Website jadi 1-2 hari</div>
+</div>
+</div>
+</section>
 
-    <!-- Logistics Section -->
-    <section id="logistics" class="section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h2 data-lang-id="Layanan Logistik Ekspor" data-lang-en="Export Logistics Services">Layanan Logistik Ekspor</h2>
-                <p data-lang-id="Pengiriman aman ke seluruh dunia dengan standar kepabeanan yang terjamin." 
-                   data-lang-en="Safe delivery worldwide with guaranteed customs standards.">
-                   Pengiriman aman ke seluruh dunia dengan standar kepabeanan yang terjamin.
-                </p>
-            </div>
+<!-- PAKET -->
+<section class="section">
+<div class="container">
+<h2 style="text-align:center">Paket Harga</h2>
 
-            <div class="logistics-grid">
-                <div class="logistics-item">
-                    <div class="logistics-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                    <h4 data-lang-id="Pengiriman Global" data-lang-en="Global Shipping">Pengiriman Global</h4>
-                    <p data-lang-id="Jangkauan pengiriman ke lebih dari 50 negara via Udara dan Laut." 
-                       data-lang-en="Shipping coverage to more than 50 countries via Air and Sea.">
-                       Jangkauan pengiriman ke lebih dari 50 negara via Udara dan Laut.
-                    </p>
-                </div>
-                <div class="logistics-item">
-                    <div class="logistics-icon"><i class="fa-solid fa-file-contract"></i></div>
-                    <h4 data-lang-id="Kepabeanan" data-lang-en="Customs Compliance">Kepabeanan</h4>
-                    <p data-lang-id="Dokumentasi lengkap (HS Code, Invoice, Packing List) yang sesuai regulasi internasional." 
-                       data-lang-en="Complete documentation (HS Code, Invoice, Packing List) compliant with international regulations.">
-                       Dokumentasi lengkap (HS Code, Invoice, Packing List) yang sesuai regulasi internasional.
-                    </p>
-                </div>
-                <div class="logistics-item">
-                    <div class="logistics-icon"><i class="fa-solid fa-boxes-packing"></i></div>
-                    <h4 data-lang-id="Quality Control" data-lang-en="Quality Control">Quality Control</h4>
-                    <p data-lang-id="Pemeriksaan ketat sebelum pengiriman untuk memastikan barang bebas dari cacat." 
-                       data-lang-en="Strict inspection before delivery to ensure goods are defect-free.">
-                       Pemeriksaan ketat sebelum pengiriman untuk memastikan barang bebas dari cacat.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid">
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang-id="Hubungi Kami" data-lang-en="Contact Us">Hubungi Kami</h2>
-                <p data-lang-id="Siap menjadi mitra sukses bisnis Anda" data-lang-en="Ready to be your successful business partner">Siap menjadi mitra sukses bisnis Anda</p>
-            </div>
+<div class="card">
+<h3>Paket Hemat</h3>
+<p class="price">Rp 499rb</p>
+<ul>
+<li>✔ 1 Halaman</li>
+<li>✔ Mobile Friendly</li>
+<li>✔ Tombol WhatsApp</li>
+<li>✔ Revisi 1x</li>
+</ul>
+<a href="https://wa.me/6281234567890?text=Saya mau paket 499rb" class="btn">Ambil Paket</a>
+</div>
 
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>PT TEKSTIL MAJU GLOBAL</h3>
-                    <div class="info-group">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Jl. Industri Raya No. 88, Kawasan Industri Pulo Gadung, Jakarta Timur, DKI Jakarta 13920</p>
-                    </div>
-                    <div class="info-group">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>sales@pttekstilmaju.com</p>
-                    </div>
-                    <div class="info-group">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>+62 21 5555 1234</p>
-                    </div>
-                    <div class="info-group">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <p>+62 812 3456 7890</p>
-                    </div>
-                </div>
+<div class="card">
+<h3>Paket Bisnis</h3>
+<p class="price">Rp 1jt</p>
+<ul>
+<li>✔ 3-5 Halaman</li>
+<li>✔ SEO Basic</li>
+<li>✔ Desain Premium</li>
+<li>✔ Revisi 2x</li>
+</ul>
+<a href="https://wa.me/6281234567890?text=Saya mau paket bisnis" class="btn">Ambil Paket</a>
+</div>
 
-                <div class="contact-form">
-                    <form id="quoteForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="name" data-lang-id="Nama Lengkap" data-lang-en="Full Name">Nama Lengkap</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-lang-id="Email Bisnis" data-lang-en="Business Email">Email Bisnis</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="product" data-lang-id="Ketertarikan Produk" data-lang-en="Product Interest">Ketertarikan Produk</label>
-                            <select id="product" class="form-control">
-                                <option value="Katun">Katun / Cotton</option>
-                                <option value="Sutra">Sutra / Silk</option>
-                                <option value="Poliester">Poliester / Polyester</option>
-                                <option value="Lainnya">Lainnya / Others</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-lang-id="Pesan / Detail Permintaan" data-lang-en="Message / Request Details">Pesan / Detail Permintaan</label>
-                            <textarea id="message" rows="4" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-secondary" style="width: 100%;" data-lang-id="Kirim Permintaan" data-lang-en="Send Request">Kirim Permintaan</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>Paket Sultan</h3>
+<p class="price">Rp 2jt</p>
+<ul>
+<li>✔ Unlimited Halaman</li>
+<li>✔ Custom Design</li>
+<li>✔ Fitur lengkap</li>
+<li>✔ Revisi bebas</li>
+</ul>
+<a href="https://wa.me/6281234567890?text=Saya mau paket premium" class="btn">Ambil Paket</a>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>PT TEKSTIL MAJU</h4>
-                    <p data-lang-id="Pemasok tekstil profesional dengan komitmen kualitas dan layanan terbaik sejak 2005." 
-                       data-lang-en="Professional textile supplier committed to quality and best service since 2005.">
-                       Pemasok tekstil profesional dengan komitmen kualitas dan layanan terbaik sejak 2005.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-lang-id="Tautan Cepat" data-lang-en="Quick Links">Tautan Cepat</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#catalog">Catalog</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-lang-id="Legal" data-lang-en="Legal">Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Export</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2023 PT Tekstil Maju Global. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+</div>
+</div>
+</section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6281234567890" class="wa-float" target="_blank" aria-label="Chat WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+<!-- TESTIMONI -->
+<section class="section" style="background:#f8f9fa">
+<div class="container text-center">
+<h2>Testimoni Client</h2>
 
-    <!-- Product Modal (Interactive) -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <img class="modal-img" id="modalImg" src="" alt="Product Detail">
-            <div class="modal-details">
-                <h3 id="modalTitle">Product Name</h3>
-                <p id="modalDesc">Description goes here.</p>
-                <br>
-                <div class="product-specs">
-                    <span class="spec-item"><i class="fa-solid fa-circle-check"></i> <span id="modalSpec1">Spec 1</span></span>
-                    <span class="spec-item"><i class="fa-solid fa-check-double"></i> <span id="modalSpec2">Spec 2</span></span>
-                </div>
-                <a href="#contact" onclick="closeModal()" class="btn" style="margin-top: 20px; width: fit-content;" data-lang-id="Tanya Produk Ini" data-lang-en="Ask About This Product">Tanya Produk Ini</a>
-            </div>
-        </div>
-    </div>
+<div class="grid">
+<div class="card">
+<p>"Awalnya cuma jualan di WA, sekarang lebih dipercaya!"</p>
+<strong>- Owner Frozen Food</strong>
+</div>
 
-    <!-- Toast Notification -->
-    <div id="toast">Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.</div>
+<div class="card">
+<p>"Website murah tapi hasilnya keren!"</p>
+<strong>- UMKM Fashion</strong>
+</div>
+</div>
 
-    <!-- JavaScript -->
-    <script>
-        // --- Data Produk untuk Modal ---
-        const products = {
-            'product1': {
-                title: 'Japanese Cotton (Katun Jepang)',
-                desc: 'Kapas premium dengan serat halus, sangat cocok untuk pakaian anak-anak dan fashion sehari-hari. Sejuk dan menyerap keringat dengan baik.',
-                img: 'https://picsum.photos/seed/cotton/800/800',
-                spec1: '120 GSM (Adem)',
-                spec2: 'Lebar 150 cm'
-            },
-            'product2': {
-                title: 'Natural Silk (Sutra Alami)',
-                desc: 'Sutra tenun manual ATBM dengan motif tradisional yang eksklusif dan kilau alami yang mewah. Membutuhkan perawatan khusus (dry clean recommended).',
-                img: 'https://picsum.photos/seed/silk/800/800',
-                spec1: '90 GSM (Mewah)',
-                spec2: 'Lebar 114 cm'
-            },
-            'product3': {
-                title: 'Industrial Polyester',
-                desc: 'Kain tahan lama dan anti-air, dirancang khusus untuk kebutuhan otomotif, tas, dan furnitur outdoor. Tahan terhadap jamur dan sinar UV.',
-                img: 'https://picsum.photos/seed/polyester/800/800',
-                spec1: '300 GSM (Kuat)',
-                spec2: 'Lebar 200 cm'
-            }
-        };
+<a href="https://wa.me/6281234567890" class="btn" style="margin-top:20px;">
+Pesan Sekarang
+</a>
 
-        // --- Bahasa System ---
-        let currentLang = 'id';
+</div>
+</section>
 
-        function setLanguage(lang) {
-            currentLang = lang;
-            
-            // Update Active Button State
-            document.getElementById('btn-id').classList.remove('active');
-            document.getElementById('btn-en').classList.remove('active');
-            document.getElementById(`btn-${lang}`).classList.add('active');
+<!-- CTA -->
+<section class="section">
+<div class="container" style="text-align:center">
+<h2>Siap Naikin Penjualan Kamu?</h2>
+<p>Konsultasi GRATIS via WhatsApp sekarang</p>
 
-            // Update All Text Elements
-            const elements = document.querySelectorAll('[data-lang-id]');
-            elements.forEach(el => {
-                if(lang === 'id') {
-                    el.innerText = el.getAttribute('data-lang-id');
-                } else {
-                    el.innerText = el.getAttribute('data-lang-en');
-                }
-            });
+<a href="https://wa.me/6281234567890?text=Halo saya mau website"
+class="btn">Chat Sekarang</a>
+</div>
+</section>
 
-            // Update Toast Message based on language
-            const toast = document.getElementById("toast");
-            if(lang === 'id') {
-                toast.innerText = "Pesan Anda telah terkirim! Tim sales kami akan segera menghubungi Anda.";
-            } else {
-                toast.innerText = "Your message has been sent! Our sales team will contact you shortly.";
-            }
-        }
+<footer>
+<p>© 2026 Jasa Website UMKM</p>
+</footer>
 
-        // --- Mobile Menu Toggle ---
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // --- Modal Functions ---
-        function openModal(productId) {
-            const product = products[productId];
-            document.getElementById('modalImg').src = product.img;
-            document.getElementById('modalTitle').innerText = product.title;
-            document.getElementById('modalDesc').innerText = product.desc;
-            document.getElementById('modalSpec1').innerText = product.spec1;
-            document.getElementById('modalSpec2').innerText = product.spec2;
-            
-            const modal = document.getElementById('productModal');
-            modal.style.display = 'flex';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('productModal');
-            modal.style.display = 'none';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('productModal');
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // --- Form Submission Handler (Simulation) ---
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            // Get values (for demo purposes)
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            // Show Success Toast
-            const toast = document.getElementById("toast");
-            toast.className = "show";
-            
-            // Reset Form
-            document.getElementById("quoteForm").reset();
-
-            // Hide Toast after 3 seconds
-            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-        }
-    </script>
 </body>
 </html>
