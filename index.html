@@ -3,122 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasa Website UMKM Murah</title>
+<title>Jasa Pembuatan Website Profesional</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Montserrat,sans-serif;margin:0;color:#333}
-.container{max-width:1000px;margin:auto;padding:20px}
-.hero{background:#0f2b46;color:#fff;text-align:center;padding:100px 20px}
-.btn{background:#ff5722;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block}
-.section{padding:60px 0}
-.grid{display:grid;gap:20px}
-.card{padding:20px;border-radius:8px;border:1px solid #eee}
-.price{font-size:28px;color:#ff5722;font-weight:bold}
-.urgent{color:red;font-weight:bold}
-.center{text-align:center}
+:root{
+--primary:#0f172a;
+--accent:#2563eb;
+--text:#333;
+--gray:#f8fafc;
+}
+
+body{
+font-family:Montserrat,sans-serif;
+margin:0;
+color:var(--text);
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
+header{
+position:fixed;
+width:100%;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+z-index:999;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+}
+
+nav h3{
+color:var(--primary);
+}
+
+nav a{
+text-decoration:none;
+color:var(--primary);
+font-weight:500;
+}
+
+.btn{
+background:var(--accent);
+color:#fff;
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+padding:140px 20px 100px;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.hero p{
+color:#555;
+max-width:600px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.section{
+padding:80px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+padding:25px;
+border-radius:10px;
+background:#fff;
+border:1px solid #eee;
+}
+
+.gray{
+background:var(--gray);
+}
+
+.price{
+font-size:26px;
+color:var(--accent);
+font-weight:700;
+}
+
+.center{
+text-align:center;
+}
+
+footer{
+background:var(--primary);
+color:#fff;
+text-align:center;
+padding:30px;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<header>
+<div class="container">
+<nav>
+<h3>WebCraft Studio</h3>
+<a href="#contact" class="btn">Konsultasi</a>
+</nav>
+</div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-<h1>Masih Jualan Cuma di WA? 😢</h1>
-
-<p>Customer ragu karena bisnis kamu belum punya website</p>
-
-<h2>🔥 Sekarang bikin website mulai 499rb!</h2>
-
-<p class="urgent">⚠ Diskon hanya hari ini!</p>
-
-<a href="https://wa.me/6281234567890?text=Halo saya mau website" class="btn">
-Chat WhatsApp Sekarang
+<div class="container">
+<h1>Kami Membantu Bisnis Anda Tampil Profesional di Dunia Digital</h1>
+<p>
+Jasa pembuatan website modern, cepat, dan terpercaya untuk UMKM hingga bisnis berkembang.
+</p>
+<a href="https://wa.me/6281234567890" class="btn">
+Mulai Konsultasi
 </a>
-</section>
-
-<!-- MASALAH -->
-<section class="section center">
-<h2>Masalah UMKM Saat Ini</h2>
-
-<div class="grid">
-<div class="card">❌ Jualan cuma dari WA / IG</div>
-<div class="card">❌ Kurang dipercaya customer</div>
-<div class="card">❌ Saingan makin banyak</div>
 </div>
 </section>
 
-<!-- SOLUSI -->
-<section class="section center" style="background:#f8f9fa">
-<h2>Solusi Kami 🚀</h2>
-
-<div class="grid">
-<div class="card">✔ Website profesional</div>
-<div class="card">✔ Bisa langsung order via WA</div>
-<div class="card">✔ Bikin bisnis lebih dipercaya</div>
-</div>
-
-<a href="https://wa.me/6281234567890" class="btn" style="margin-top:20px">
-Konsultasi Gratis
-</a>
-</section>
-
-<!-- HASIL -->
-<section class="section center">
-<h2>Hasil Setelah Punya Website</h2>
-
-<div class="grid">
-<div class="card">📈 Penjualan meningkat</div>
-<div class="card">💼 Terlihat lebih profesional</div>
-<div class="card">🔥 Closing lebih gampang</div>
+<!-- ABOUT -->
+<section class="section gray">
+<div class="container center">
+<h2>Tentang Kami</h2>
+<p>
+Kami adalah tim profesional yang fokus membantu bisnis memiliki website berkualitas 
+untuk meningkatkan kredibilitas dan penjualan secara online.
+</p>
 </div>
 </section>
 
-<!-- HARGA -->
-<section class="section center" style="background:#f8f9fa">
-<h2>Paket Harga</h2>
+<!-- SERVICES -->
+<section class="section">
+<div class="container">
+<h2 class="center">Layanan Kami</h2>
 
 <div class="grid">
-
 <div class="card">
-<h3>Paket UMKM</h3>
-<p class="price">Rp 499rb</p>
-<p>✔ 1 Halaman<br>✔ Mobile Friendly<br>✔ WhatsApp</p>
-<a href="https://wa.me/6281234567890?text=Saya mau paket 499rb" class="btn">Ambil</a>
+<h4>Website Company Profile</h4>
+<p>Cocok untuk branding bisnis agar terlihat profesional.</p>
 </div>
 
 <div class="card">
-<h3>Paket Bisnis</h3>
+<h4>Landing Page</h4>
+<p>Halaman khusus untuk meningkatkan penjualan produk.</p>
+</div>
+
+<div class="card">
+<h4>Website Custom</h4>
+<p>Solusi sesuai kebutuhan bisnis Anda.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section gray">
+<div class="container">
+<h2 class="center">Portfolio</h2>
+
+<div class="grid">
+<div class="card">Website UMKM Fashion</div>
+<div class="card">Website Kuliner</div>
+<div class="card">Landing Page Produk</div>
+</div>
+
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="section">
+<div class="container">
+<h2 class="center">Paket Harga</h2>
+
+<div class="grid">
+
+<div class="card center">
+<h3>Basic</h3>
+<p class="price">Rp 500rb</p>
+<p>Website 1 halaman</p>
+<a href="https://wa.me/6281234567890" class="btn">Pilih</a>
+</div>
+
+<div class="card center">
+<h3>Standard</h3>
 <p class="price">Rp 1jt</p>
-<p>✔ 5 Halaman<br>✔ SEO<br>✔ Design Premium</p>
-<a href="https://wa.me/6281234567890?text=Saya mau paket bisnis" class="btn">Ambil</a>
+<p>Website bisnis lengkap</p>
+<a href="https://wa.me/6281234567890" class="btn">Pilih</a>
+</div>
+
+<div class="card center">
+<h3>Premium</h3>
+<p class="price">Rp 2jt</p>
+<p>Custom + fitur lengkap</p>
+<a href="https://wa.me/6281234567890" class="btn">Pilih</a>
 </div>
 
 </div>
-
-<p class="urgent">⚠ Slot terbatas! Hanya 5 orang/hari</p>
+</div>
 </section>
 
-<!-- TESTI -->
-<section class="section center">
+<!-- TESTIMONI -->
+<section class="section gray">
+<div class="container center">
 <h2>Testimoni</h2>
 
 <div class="grid">
-<div class="card">"Order naik setelah pakai website!"</div>
-<div class="card">"Murah tapi hasil keren!"</div>
+<div class="card">"Website saya jadi lebih profesional dan dipercaya customer."</div>
+<div class="card">"Pelayanan cepat dan hasil memuaskan."</div>
+</div>
+
 </div>
 </section>
 
-<!-- CTA AKHIR -->
-<section class="section center" style="background:#0f2b46;color:#fff">
-<h2>Jangan Sampai Ketinggalan 🚀</h2>
+<!-- CTA -->
+<section class="section">
+<div class="container center">
+<h2>Siap Meningkatkan Bisnis Anda?</h2>
+<p>Konsultasi gratis tanpa komitmen</p>
 
-<p>Kompetitor kamu sudah mulai pakai website</p>
-
-<a href="https://wa.me/6281234567890?text=Halo saya mau website sekarang"
-class="btn">Chat Sekarang</a>
+<a href="https://wa.me/6281234567890" class="btn">
+Hubungi Kami
+</a>
+</div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 WebCraft Studio</p>
+</footer>
 
 </body>
 </html>
