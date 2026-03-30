@@ -1,207 +1,114 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebCraft Studio - Jasa Website Profesional</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{
---primary:#0f172a;
---accent:#6366f1;
---text:#1e293b;
---gray:#f1f5f9;
-}
+<title>WebCraft Studio</title>
 
-body{
-font-family:Inter,sans-serif;
-margin:0;
-color:var(--text);
-background:#ffffff;
-}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
-}
+</head>
 
-header{
-position:fixed;
-width:100%;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #eee;
-z-index:999;
-}
+<body>
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-height:70px;
-}
-
-nav h3{
-font-weight:700;
-color:var(--primary);
-}
-
-.btn{
-background:linear-gradient(135deg,#6366f1,#4f46e5);
-color:#fff;
-padding:12px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.hero{
-padding:160px 20px 120px;
-text-align:center;
-}
-
-.hero h1{
-font-size:42px;
-line-height:1.3;
-color:var(--primary);
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:600px;
-margin:auto;
-color:#64748b;
-margin-bottom:30px;
-}
-
-.section{
-padding:90px 0;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-padding:30px;
-border-radius:16px;
-background:#fff;
-border:1px solid #eee;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
-}
-
-.gray{
-background:var(--gray);
-}
-
-.price{
-font-size:28px;
-color:var(--accent);
-font-weight:700;
-}
-
-.center{text-align:center;}
-
-.testi-img{
-width:100%;
-border-radius:12px;
-margin-bottom:15px;
-}
-
-.section-title{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.section-sub{
-color:#64748b;
-margin-bottom:40px;
-}
-
-footer{
-background:var(--primary);
-color:#fff;
-text-align:center;
-padding:40px;
-margin-top:40px;
-}
-
-</style></head><body><header>
+<header>
 <div class="container">
 <nav>
 <h3>WebCraft Studio</h3>
 <a href="#contact" class="btn">Konsultasi</a>
 </nav>
 </div>
-</header><section class="hero">
+</header>
+
+<!-- HERO -->
+<section class="hero">
 <div class="container">
 <h1>Membangun Website Profesional untuk Bisnis Modern</h1>
-<p>Kami membantu UMKM dan bisnis berkembang memiliki website yang elegan, cepat, dan meningkatkan kepercayaan pelanggan.</p>
-<a href="https://wa.me/6285189976233" class="btn">Mulai Konsultasi</a>
+<p>Kami membantu UMKM tampil lebih profesional & dipercaya.</p>
+<a href="https://wa.me/6281234567890" class="btn">Mulai Konsultasi</a>
 </div>
-</section><section class="section gray">
-<div class="container center">
-<h2 class="section-title">Tentang Kami</h2>
-<p class="section-sub">Tim profesional yang fokus pada desain modern dan performa tinggi untuk membantu bisnis Anda berkembang secara digital.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="section reveal">
+<div class="container">
+<h2 class="center">Layanan Kami</h2>
+
+<div class="grid">
+<div class="card">Website Company Profile</div>
+<div class="card">Landing Page</div>
+<div class="card">Custom Website</div>
 </div>
-</section><section class="section">
-<div class="container">
-<h2 class="section-title center">Layanan Kami</h2>
-<p class="section-sub center">Solusi lengkap untuk kebutuhan website bisnis Anda</p><div class="grid">
-<div class="card"><h4>Company Profile</h4><p>Meningkatkan kredibilitas bisnis Anda secara online.</p></div>
-<div class="card"><h4>Landing Page</h4><p>Optimasi penjualan dengan halaman yang fokus conversion.</p></div>
-<div class="card"><h4>Custom Website</h4><p>Website sesuai kebutuhan spesifik bisnis Anda.</p></div>
-</div></div>
-</section><section class="section gray">
-<div class="container">
-<h2 class="section-title center">Portfolio</h2>
-<p class="section-sub center">Beberapa proyek yang telah kami kerjakan</p><div class="grid">
-<div class="card">Website Fashion Brand</div>
-<div class="card">Website Kuliner</div>
-<div class="card">Landing Page Produk</div>
-</div></div>
-</section><section class="section">
-<div class="container">
-<h2 class="section-title center">Paket Harga</h2>
-<p class="section-sub center">Pilihan paket sesuai kebutuhan bisnis Anda</p><div class="grid">
-<div class="card center"><h3>Basic</h3><p class="price">Rp 500rb</p><p>Website 1 halaman</p><a href="https://wa.me/6281234567890" class="btn">Pilih Paket</a></div>
-<div class="card center"><h3>Standard</h3><p class="price">Rp 1jt</p><p>Website bisnis lengkap</p><a href="https://wa.me/6281234567890" class="btn">Pilih Paket</a></div>
-<div class="card center"><h3>Premium</h3><p class="price">Rp 2jt</p><p>Custom + fitur lengkap</p><a href="https://wa.me/6281234567890" class="btn">Pilih Paket</a></div>
-</div></div>
-</section><section class="section gray">
-<div class="container center">
-<h2 class="section-title">Testimoni Client</h2>
-<p class="section-sub">Kepercayaan client adalah prioritas kami</p><div class="grid"><div class="card">
-<img src="https://picsum.photos/seed/testi1/400/250" class="testi-img">
-<p>"Website saya jadi lebih profesional dan dipercaya customer."</p>
-<strong>- Owner UMKM</strong>
-</div><div class="card">
-<img src="https://picsum.photos/seed/testi2/400/250" class="testi-img">
-<p>"Pelayanan cepat dan hasil sangat memuaskan."</p>
-<strong>- Bisnis Kuliner</strong>
-</div><div class="card">
-<img src="https://picsum.photos/seed/testi3/400/250" class="testi-img">
-<p>"Desain modern dan sesuai dengan brand saya."</p>
-<strong>- Online Shop</strong>
-</div></div></div>
-</section><section id="contact" class="section">
-<div class="container center">
-<h2 class="section-title">Siap Meningkatkan Bisnis Anda?</h2>
-<p class="section-sub">Mulai konsultasi gratis hari ini</p>
-<a href="https://wa.me/6285189976233" class="btn">Hubungi Kami</a>
+
 </div>
-</section><footer>
-<p>© 2026 WebCraft Studio. All rights reserved.</p>
-</footer></body>
+</section>
+
+<!-- PRICING -->
+<section class="section gray reveal">
+<div class="container">
+<h2 class="center">Paket Harga</h2>
+
+<div class="grid">
+<div class="card center">
+<h3>Basic</h3>
+<p class="price">Rp 500rb</p>
+<a href="#" class="btn">Pilih</a>
+</div>
+
+<div class="card center">
+<h3>Standard</h3>
+<p class="price">Rp 1jt</p>
+<a href="#" class="btn">Pilih</a>
+</div>
+
+<div class="card center">
+<h3>Premium</h3>
+<p class="price">Rp 2jt</p>
+<a href="#" class="btn">Pilih</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- TESTI -->
+<section class="section reveal">
+<div class="container center">
+<h2>Testimoni</h2>
+
+<div class="grid">
+<div class="card">
+<img src="https://picsum.photos/seed/1/400/250" class="testi-img">
+<p>"Website saya jadi lebih profesional!"</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/seed/2/400/250" class="testi-img">
+<p>"Pelayanan cepat dan hasil keren!"</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="section center reveal">
+<div class="container">
+<h2>Siap mulai?</h2>
+<a href="https://wa.me/6281234567890" class="btn">Hubungi Kami</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 WebCraft Studio</p>
+</footer>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
 </html>
