@@ -6,15 +6,165 @@
 <title>WebCraft Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+:root{
+--primary:#0f172a;
+--accent:#6366f1;
+--text:#1e293b;
+--gray:#f1f5f9;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Inter,sans-serif;
+margin:0;
+color:var(--text);
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#0f172a;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-text{
+font-size:24px;
+letter-spacing:2px;
+}
+
+/* PROGRESS */
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:3px;
+background:#6366f1;
+width:0%;
+z-index:9999;
+}
+
+/* NAV */
+header{
+position:fixed;
+width:100%;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+z-index:999;
+border-bottom:1px solid #eee;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+}
+
+/* BUTTON */
+.btn{
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#fff;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn:hover{
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* HERO */
+.hero{
+padding:160px 20px 120px;
+text-align:center;
+background:linear-gradient(to bottom,#fff,#f1f5f9);
+position:relative;
+}
+
+.hero h1{
+font-size:42px;
+color:var(--primary);
+}
+
+.hero p{
+color:#64748b;
+margin-bottom:30px;
+}
+
+/* SECTION */
+.section{
+padding:90px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+padding:30px;
+border-radius:16px;
+background:#fff;
+border:1px solid #eee;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+}
+
+.gray{
+background:var(--gray);
+}
+
+.price{
+font-size:28px;
+color:var(--accent);
+font-weight:700;
+}
+
+.center{text-align:center;}
+
+.testi-img{
+width:100%;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+background:var(--primary);
+color:#fff;
+text-align:center;
+padding:40px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- PROGRESS -->
 <div id="progress"></div>
 
-<!-- LOADER -->
 <div id="loader">
   <div class="loader-text">WebCraft Studio</div>
 </div>
@@ -28,8 +178,7 @@
 </div>
 </header>
 
-<!-- HERO -->
-<section class="hero glow">
+<section class="hero">
 <div class="container">
 <h1>Membangun Website Profesional untuk Bisnis Modern</h1>
 <p>Kami membantu UMKM tampil lebih profesional & dipercaya.</p>
@@ -37,8 +186,7 @@
 </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section reveal">
+<section class="section">
 <div class="container">
 <h2 class="center">Layanan Kami</h2>
 <div class="grid">
@@ -49,8 +197,7 @@
 </div>
 </section>
 
-<!-- PRICING -->
-<section class="section gray reveal">
+<section class="section gray">
 <div class="container">
 <h2 class="center">Paket Harga</h2>
 <div class="grid">
@@ -73,8 +220,7 @@
 </div>
 </section>
 
-<!-- TESTI -->
-<section class="section reveal">
+<section class="section">
 <div class="container center">
 <h2>Testimoni</h2>
 <div class="grid">
@@ -90,8 +236,7 @@
 </div>
 </section>
 
-<!-- CTA -->
-<section id="contact" class="section center reveal">
+<section id="contact" class="section center">
 <div class="container">
 <h2>Siap mulai?</h2>
 <a href="https://wa.me/6281234567890" class="btn">Hubungi Kami</a>
@@ -106,8 +251,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<script>
+// LOADER FIX (ANTI BLANK)
+window.addEventListener("load", function(){
+  const loader = document.getElementById("loader");
+  loader.style.opacity = "0";
+  setTimeout(() => loader.style.display = "none", 500);
+});
+
+// GSAP SAFE
+if (typeof gsap !== "undefined") {
+gsap.registerPlugin(ScrollTrigger);
+
+// HERO
+gsap.from(".hero h1", {y:80, opacity:0, duration:1});
+gsap.from(".hero p", {y:60, opacity:0, duration:1, delay:0.2});
+gsap.from(".hero .btn", {scale:0.8, opacity:0, duration:0.8, delay:0.4});
+
+// GRID
+gsap.utils.toArray(".grid").forEach(grid => {
+gsap.from(grid.children, {
+opacity:0,
+y:50,
+stagger:0.2,
+duration:0.8,
+scrollTrigger:{
+trigger:grid,
+start:"top 85%"
+}
+});
+});
+}
+
+// PROGRESS BAR
+window.addEventListener("scroll", () => {
+const scrollTop = window.scrollY;
+const height = document.body.scrollHeight - window.innerHeight;
+const progress = (scrollTop / height) * 100;
+document.getElementById("progress").style.width = progress + "%";
+});
+</script>
 
 </body>
 </html>
